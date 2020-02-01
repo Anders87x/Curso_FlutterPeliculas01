@@ -3,15 +3,12 @@ class Cast {
   List<Actor> actores = new List();
 
   Cast.fromJsonList( List<dynamic> jsonList  ){
-
     if ( jsonList == null ) return;
-
     jsonList.forEach( (item) {
       final actor = Actor.fromJsonMap(item);
       actores.add(actor);
     });
   }
-
 }
 
 class Actor {
@@ -46,14 +43,11 @@ class Actor {
     profilePath = json['profile_path'];
   }
 
-   getFoto() {
-
-  if ( profilePath == null ) {
-    return 'http://forum.spaceengine.org/styles/se/theme/images/no_avatar.jpg';
-  } else {
-    return 'https://image.tmdb.org/t/p/w500/$profilePath';
+  getFoto() {
+    if ( profilePath == null ) {
+      return 'https://cdn11.bigcommerce.com/s-auu4kfi2d9/stencil/59512910-bb6d-0136-46ec-71c445b85d45/e/933395a0-cb1b-0135-a812-525400970412/icons/icon-no-image.svg';
+    } else {
+      return 'https://image.tmdb.org/t/p/w500/$profilePath';
+    }
   }
-
-  }
-
 }

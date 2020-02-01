@@ -19,11 +19,8 @@ class PeliculaDetalle extends StatelessWidget {
               [
                 SizedBox( height: 10.0 ),
                 _posterTitulo( context, pelicula ),
-                //_descripcion( pelicula ),
-                //_descripcion( pelicula ),
-                //_descripcion( pelicula ),
-                //_descripcion( pelicula ),
-                //_crearCasting( pelicula )
+                _descripcion( pelicula ),
+                _crearCasting( pelicula )
               ]
             ),
           ) 
@@ -48,7 +45,7 @@ class PeliculaDetalle extends StatelessWidget {
         background: FadeInImage(
           image: NetworkImage( pelicula.getBackgroundImg() ),
           placeholder: AssetImage('assets/img/loading.gif'),
-          fadeInDuration: Duration(microseconds: 550),
+          fadeInDuration: Duration(milliseconds: 200),
           fit: BoxFit.cover,
         ),
       ),
@@ -144,7 +141,7 @@ class PeliculaDetalle extends StatelessWidget {
             child: FadeInImage(
               image: NetworkImage( actor.getFoto() ),
               placeholder: AssetImage('assets/img/no-image.jpg'),
-              height: 150.0,
+              height: 130.0,
               fit: BoxFit.cover,
             ),
           ),

@@ -17,8 +17,6 @@ class Peliculas {
 
 }
 
-
-
 class Pelicula {
 
   String uniqueId;
