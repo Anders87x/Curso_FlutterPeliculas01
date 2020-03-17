@@ -29,7 +29,6 @@ class DataSearch extends SearchDelegate {
 
   @override
   List<Widget> buildActions(BuildContext context) {
-    // Las acciones de nuestro AppBar
     return [
       IconButton(
         icon: Icon( Icons.clear ),
@@ -42,7 +41,6 @@ class DataSearch extends SearchDelegate {
 
   @override
   Widget buildLeading(BuildContext context) {
-    // Icono a la izquierda del AppBar
     return IconButton(
       icon: AnimatedIcon(
         icon: AnimatedIcons.menu_arrow,
@@ -56,7 +54,6 @@ class DataSearch extends SearchDelegate {
 
   @override
   Widget buildResults(BuildContext context) {
-    // Crea los resultados que vamos a mostrar
     return Center(
       child: Container(
         height: 100.0,
@@ -69,7 +66,6 @@ class DataSearch extends SearchDelegate {
 
   @override
   Widget buildSuggestions(BuildContext context) {
-    // Son las sugerencias que aparecen cuando la persona escribe
     if ( query.isEmpty ) {
       return Container();
     }
@@ -101,13 +97,11 @@ class DataSearch extends SearchDelegate {
                   );
               }).toList()
             );
-
           } else {
             return Center(
               child: CircularProgressIndicator()
             );
           }
-
       },
     );
 
